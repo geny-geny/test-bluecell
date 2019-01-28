@@ -1,0 +1,48 @@
+.menu {
+  margin: 9vh 0 0;
+
+  @include media-breakpoint-up(md) {
+    margin: 11vh 0 0;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin: 13vh 0 0;
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin: 15vh 0 0;
+  }
+
+  &__list {
+    @include clearList;
+  }
+  &__item {
+    display: block;
+    text-align: center;
+    @include remSize(padding, 10, 0);
+  }
+  &__link {
+    font-weight: bold;
+    display: block;
+    color: $black;
+    transition: color 0.25s ease-in-out;
+    @include remSize(font-size, 20);
+    
+    @include media-breakpoint-up(md) {
+      @include remSize(font-size, 24);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include remSize(font-size, 26);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include remSize(font-size, 30);
+    }
+
+    &:hover {
+      color: $button;
+      text-decoration: none;
+    }
+  }
+}

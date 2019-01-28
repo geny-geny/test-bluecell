@@ -1,0 +1,43 @@
+// Bootstrap files
+// ============
+@import "bootstrap/bootstrap-reboot.scss";
+@import "bootstrap/bootstrap-grid.scss";
+
+// Owl carousel files
+// ============
+@import "owl-carousel/owl.carousel.scss";
+
+// Utils files
+// ============
+@import "utils/colors";
+@import "utils/variables";
+@import "utils/mixins";
+
+// Base files
+// ============
+@import "base/base";
+@import "base/footer";
+@import "base/menu-footer";
+@import "base/header";
+@import "base/nav";
+@import "base/menu";
+
+// Elements files
+// ============
+@import "elements/button";
+@import "elements/headings";
+@import "elements/logo";
+@import "elements/pager";
+
+// Home files
+// ============
+@import "home/main-fold";
+@import "home/looking-for";
+@import "home/values";
+@import "home/projects";
+@import "home/jury";
+@import "home/jury-carousel";
+
+// Projects files
+// ============
+@import "projects/project-block";

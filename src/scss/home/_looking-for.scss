@@ -1,0 +1,34 @@
+.looking-for {
+  @include remSize(margin, 40, 0);
+  &__img {
+    @include setImg;
+    width: 100%;
+  }
+  &__text {
+    @include remSize(font-size, 14);
+    @include remSize(padding, 25);
+    height: 100%;
+    color: $white;
+    background-color: $blue;
+    & p {
+      margin: 0 0 1em 0;
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      @include remSize(font-size, 15);
+      @include remSize(padding, 30);
+    }
+  
+    @include media-breakpoint-up(lg) {
+      @include remSize(padding, 20);
+    }
+  
+    @include media-breakpoint-up(xl) {
+      @include remSize(font-size, 18);
+      @include remSize(padding, 45);
+    }
+  }
+}

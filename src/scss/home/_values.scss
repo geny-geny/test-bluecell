@@ -1,0 +1,60 @@
+.values {
+  @include remSize(margin, 40, 0);
+
+  &__list {
+    @include clearList;
+    @include remSize(padding, 20, 15);
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $light-gray-blue;
+
+    @include media-breakpoint-up(md) {
+      @include remSize(padding, 30, 15);
+    }
+  
+    @include media-breakpoint-up(lg) {
+      @include remSize(padding, 20, 10);
+    }
+  
+    @include media-breakpoint-up(xl) {
+      @include remSize(padding, 40, 15);
+    }
+  }
+
+  &__item {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+
+    @include media-breakpoint-up(md) {
+      width: 20%;
+    }
+  }
+
+  &__img {
+    @include setImg;
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto;
+  }
+
+  &__text {
+    @include remSize(font-size, 14);
+    margin-top: 0.75em;
+    display: block;
+    font-weight: bold;
+
+    @include media-breakpoint-up(md) {
+      @include remSize(font-size, 16);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include remSize(font-size, 18);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include remSize(font-size, 24);
+    }
+  }
+}

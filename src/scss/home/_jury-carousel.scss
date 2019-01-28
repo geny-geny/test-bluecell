@@ -1,0 +1,76 @@
+.owl-carousel{
+  & .owl-prev, & .owl-next {
+    color: $white !important;
+    position: absolute;
+    top: 50%;
+    font-size: 1.25em !important;
+    
+    @include media-breakpoint-up(lg) {
+      font-size: 2em !important;
+    }
+  }
+  & .owl-prev {
+    left: -4%;
+    @include media-breakpoint-up(lg) {
+      left: -6%;
+    }
+    @include media-breakpoint-up(xl) {
+      left: -9%;
+    }
+  }
+  & .owl-next {
+    right: -4%;
+    @include media-breakpoint-up(lg) {
+      right: -6%;
+    }
+    @include media-breakpoint-up(xl) {
+      right: -9%;
+    }    
+  }
+}
+.jury-carousel {
+  @include clearList;
+  margin: 0;
+  width: 80%;
+  @include remSize(max-width, 960);
+
+  &__item {
+    @include remSize(width, 240);
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  &__img {
+    @include aspectRatio(1,1);
+    @include remSize(width, 160);
+    background-color: $light-gray;
+    background-size: cover;
+    background-position: 50%;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+  }
+  &__name {
+    @include remSize(font-size, 14);
+    @include media-breakpoint-up(lg) {
+      @include remSize(font-size, 16);
+    }
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+  }
+  &__resume {
+    @include remSize(font-size, 14);
+    @include media-breakpoint-up(lg) {
+      @include remSize(font-size, 16);
+    }
+    margin: 1em 0;
+  }
+  &__sector {
+    @include remSize(font-size, 14);
+    @include media-breakpoint-up(lg) {
+      @include remSize(font-size, 16);
+    }
+    font-weight: bold;
+    margin: 0;
+  }
+}

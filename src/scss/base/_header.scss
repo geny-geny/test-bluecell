@@ -1,0 +1,86 @@
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  @include remSize(padding, 20, 0);
+
+  @include media-breakpoint-up(md) {
+    @include remSize(padding, 27, 0);
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include remSize(padding, 35, 0);
+  }
+
+  @include media-breakpoint-up(xl) {
+    @include remSize(padding, 40, 0);
+  }
+
+  transition: all 0.5s ease-in-out;
+  /* header js status */
+  &.hidden {
+    top: -200px;
+  }
+
+  &.scroll {
+    position: fixed;
+    background-color: rgba($white, 0.3);
+    top: 0;
+  }
+  /* header js status */
+  
+  &__col-last {
+    text-align: right;
+  }
+  &__btn {
+    @include clearButton;
+    @include remSize(font-size, 14);
+    background-color: $white;
+    border-radius: 1rem;
+    font-weight: bold;
+    padding: 0.25em 1em;
+    transition: color 0.25s ease-in-out;
+
+    &--round {
+      @include remSize(font-size, 16);
+      border-radius: 50%;
+      width: 2.25em;
+      height: 2.25em;
+      padding: 0;
+      line-height: 2.25em;
+      text-align: center;
+
+      @include media-breakpoint-up(md) {
+        @include remSize(font-size, 19);
+      }
+    
+      @include media-breakpoint-up(lg) {
+        @include remSize(font-size, 21);
+      }
+    
+      @include media-breakpoint-up(xl) {
+        @include remSize(font-size, 25);
+      }
+    }
+    &--sm {
+      display: inline-block;
+    
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+    }
+    &--lg {
+      display: none;
+    
+      @include media-breakpoint-up(lg) {
+        display: inline-block;
+      }
+    }
+  
+    &:hover {
+      color: $button;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.pager {
+  @include clearList;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include remSize(font-size, 19);
+
+  @include media-breakpoint-up(md) {
+    @include remSize(font-size, 24);
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include remSize(font-size, 29);
+  }
+
+  @include media-breakpoint-up(xl) {
+    @include remSize(font-size, 34);
+  }
+
+  &__item {
+    padding: 0.5em;
+  }
+
+  &__link {
+    width: 1.75em;
+    height: 1.75em;
+    line-height: 1.75em;
+    text-align: center;
+    display: block;
+    color: $white;
+    background-color: $pager;
+
+    transition: background-color 0.25s ease-in-out;
+
+    &.active, &:hover {
+      color: $white;
+      text-decoration: none;
+      background-color: $pager-active;
+    }
+  }
+}

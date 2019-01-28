@@ -1,0 +1,30 @@
+.button {
+  border: none;
+  outline: none;
+  display: inline-block;
+  background-color: $button;
+  color: $white;
+  font-weight: 700;
+  padding: 0.75em 2em;
+  transition: background-color 0.25s ease-in-out;
+  @include remSize(font-size, 16);
+  
+  @include media-breakpoint-up(md) {
+    @include remSize(font-size, 18);
+    padding: 0.25em 2em;
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include remSize(font-size, 21);
+  }
+
+  @include media-breakpoint-up(xl) {
+    @include remSize(font-size, 26);
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: $white;
+    background-color: darken($button, 25);
+  }
+}

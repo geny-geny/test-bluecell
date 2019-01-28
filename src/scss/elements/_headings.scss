@@ -1,0 +1,41 @@
+.title {
+  @include remSize(font-size, 35);
+  margin: 0 0 0.5em 0;
+  color: $font-color-base;
+  &--white {
+    color: $white;
+  }
+
+  @include media-breakpoint-up(md) {
+    @include remSize(font-size, 45);
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include remSize(font-size, 55);
+  }
+
+  @include media-breakpoint-up(xl) {
+    @include remSize(font-size, 65);
+  }
+}
+
+.subtitle {
+  @include remSize(font-size, 24);
+  margin: 0 0 0.5em 0;
+  color: $font-color-base;
+  &--white {
+    color: $white;
+  }
+
+  @include media-breakpoint-up(md) {
+    @include remSize(font-size, 32);
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include remSize(font-size, 40);
+  }
+
+  @include media-breakpoint-up(xl) {
+    @include remSize(font-size, 48);
+  }
+}

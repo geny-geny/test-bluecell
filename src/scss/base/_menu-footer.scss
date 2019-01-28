@@ -1,0 +1,43 @@
+.menu-footer {
+    @include clearList;
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__item {
+        @include remSize(font-size, 14);
+        @include remSize(margin, 5, 0);
+        @include remSize(padding, 5, 0);
+        color: $black;
+        position: relative;        
+
+        @include media-breakpoint-up(lg) {
+            @include remSize(margin, 0, 15, 0, 0);
+            @include remSize(padding, 0, 15, 0, 0);
+            &:not(:last-child):after {
+                display: block;
+                content: '';
+                position: absolute;
+                border-radius: 50%;
+                width: 3px;
+                height: 3px;
+                background-color: $black;
+                right: 0;
+                top: 50%;
+            }
+        }
+    }
+    &__link {
+        color: $black;
+
+        & i {
+            @include remSize(margin-right, 10);
+        }
+
+        &:hover {
+            color: $black;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+.jury {
+    @include remSize(margin, 60, 0);
+
+    &__content {
+        @include remSize(padding, 40, 0);
+        background-color: $purple;
+    }
+}

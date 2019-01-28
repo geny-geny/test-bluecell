@@ -1,0 +1,6 @@
+.footer {
+  @include remSize(padding, 50, 0, 25);
+  @include media-breakpoint-up(lg) {
+    @include remSize(padding, 100, 0, 50);
+  }
+}

@@ -1,0 +1,22 @@
+.main-fold {
+  @include remSize(height, 300);
+  display: flex;
+  align-items: center;
+  background-color: #D2D96D;
+  background-image: url(/assets/images/bck-fold.jpg);
+  background-position: 50%;
+  background-size: cover;
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    @include remSize(height, 360);
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include remSize(height, 400);
+  }
+
+  @include media-breakpoint-up(xl) {
+    @include remSize(height, 460);
+  }
+}
